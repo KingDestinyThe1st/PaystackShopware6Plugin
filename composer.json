@@ -1,0 +1,43 @@
+{
+  "name": "shopware6/paystack",
+
+  "description": "Paystack Integration For Shopware 6",
+
+  "version": "v1.0.0",
+
+  "type": "shopware-platform-plugin",
+
+  "license": "MIT",
+
+  "authors": [
+    {
+        "name": "Destiny Diekedie",
+        "role": "Developer @AlphikkaTech"
+        
+    }
+],
+
+
+  "autoload": {
+    "psr-4": {
+      "PaystackShopware6Plugin\\": "src/"
+    }
+  },
+
+  "extra": {
+    "shopware-plugin-class": "PaystackShopware6Plugin\\PaystackShopware6Plugin",
+    "plugin-icon": "src/Resources/config/logo/paystack_logo.png",
+    "label": {
+      "de-DE": "Paystack",
+      "en-GB": "Paystack",
+      "fr-FR": "Paystack"
+    },
+    "description": {
+      "de-DE": "Akzeptieren Sie Die Zahlung Mit Paystack",
+      "en-GB": "Accept Payment With Paystack",
+      "fr-FR": "Accepter Le Paiement Avec Paystack"
+
+    }
+  }
+
+}

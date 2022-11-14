@@ -1,0 +1,58 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+
+        <!--Entity Creation Registration Begins-->
+        <service id="PaystackShopware6Plugin\Core\Content\Paystack\PaystackKeysDefinition" >
+            <tag name="shopware.entity.definition" entity="paystack_keys" />
+        </service>
+        <!--Entity Creation Registration Ends-->
+
+        <!--Entity Creation Registration Begins-->
+        <service id="PaystackShopware6Plugin\Core\Content\TransactionReference\TransactionReferenceDefinition" >
+            <tag name="shopware.entity.definition" entity="paystack_transactions" />
+        </service>
+        <!--Entity Creation Registration Ends-->
+
+        <!--Event Subscriber Registrations Begins-->
+        <service id="PaystackShopware6Plugin\Subscriber\MySubscriber">
+            <argument type="service" id="paystack_keys.repository"/>
+            <argument type="service" id="payment_method.repository"/>
+            <argument type="service" id="PaystackShopware6Plugin\Service\PaymentLink" />
+            <tag name="kernel.event_subscriber"/>
+        </service>
+        <!--Event Subscriber Registration Ends-->
+
+        <!--Payment Link Generator Service Begins-->
+        <service id="PaystackShopware6Plugin\Service\PaymentLink">
+            <argument type="service" id="paystack_keys.repository" />
+            <argument type="service" id="paystack_transactions.repository"/>
+        </service>
+        <!--Payment Link Generator Service Ends-->
+
+        <!--Payment Service Registration Begins-->
+        <service id="PaystackShopware6Plugin\Service\PayWithPaystack">
+            <argument type="service" id="Shopware\Core\Checkout\Order\Aggregate\OrderTransaction\OrderTransactionStateHandler"/>
+            <argument type="service" id="PaystackShopware6Plugin\Service\PaymentLink" />
+            <tag name="shopware.payment.method.async" />
+        </service>
+        <!--Payment Service Registration Ends-->
+
+    </services>
+
+
+
+
+
+
+
+
+
+
+
+
+</container>

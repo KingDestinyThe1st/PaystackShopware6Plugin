@@ -1,0 +1,39 @@
+{
+
+    "heading": {
+        "title": "Paystack Réglages",
+        "name": "Paystack",
+        "description": "Accepter Les Paiements Avec Paystack",
+        "saleschannel": "Canal De Vente"
+    },
+
+    "input": {
+        "label": {
+            "secretKey": "Clef Secrète",
+            "publicKey": "Clé Publique",
+            "helper": {
+                "secretKey": "Entrez la clé secrète à partir de votre tableau de bord Paystack",
+                "publicKey": "Entrez la clé publique à partir de votre tableau de bord Paystack"
+            }
+        }
+    },
+
+    "button": {
+        "save": "Enregistrer Les Paramètres",
+        "activate": "Activer Pour",
+        "deactivate": "Désactiver Pour",
+        "default": "Définir Par Défaut Pour",
+        "label":{
+            "activate": "Activer le mode de paiement Paystack pour",
+            "deactivate": "Désactiver le mode de paiement Paystack pour",
+            "default": "Faire de Paystack le mode de paiement par défaut pour"
+        },
+        "name":{
+            "activate": "Activer Pour",
+            "deactivate": "Désactiver Pour",
+            "default": "Définir Par Défaut Pour"
+        }
+    }
+
+
+}

@@ -1,0 +1,39 @@
+{
+
+    "heading": {
+        "title": "Paystack-Einstellungen",
+        "name": "Paystack",
+        "description": "Akzeptieren Sie Zahlungen mit Paystack",
+        "saleschannel": "Verkaufskanal"
+    },
+
+    "input": {
+        "label": {
+            "secretKey": "Geheimer Schlüssel",
+            "publicKey": "Öffentlicher Schlüssel",
+            "helper": {
+                "secretKey": "Geben Sie den geheimen Schlüssel von Ihrem Paystack-Dashboard ein",
+                "publicKey": "Geben Sie den öffentlichen Schlüssel aus Ihrem Paystack-Dashboard ein"
+            }
+        }
+    },
+
+    "button": {
+        "save": "Einstellungen Speichern",
+        "activate": "Aktivieren Sie für",
+        "deactivate": "Für Deaktivieren",
+        "default": "Als Standard Festlegen Für",
+        "label":{
+            "activate": "Paystack-Zahlungsmethode Aktivieren Für",
+            "deactivate": "Paystack-Zahlungsmethode Deaktivieren Für",
+            "default": "Machen Sie Paystack Zur Standardzahlungsmethode Für"
+        },
+        "name":{
+            "activate": "Aktivieren Sie Für",
+            "deactivate": "Für Deaktivieren",
+            "default": "Als Standard Festlegen Für"
+        }
+    }
+
+
+}

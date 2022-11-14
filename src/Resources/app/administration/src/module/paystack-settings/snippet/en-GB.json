@@ -1,0 +1,39 @@
+{
+
+    "heading": {
+        "title": "Paystack Settings",
+        "name": "Paystack",
+        "description": "Accept Payments With Paystack",
+        "saleschannel": "Sales Channel"
+    },
+
+    "input": {
+        "label": {
+            "secretKey": "Secret Key",
+            "publicKey": "Public Key",
+            "helper": {
+                "secretKey": "Enter Secret Key From Your Paystack Dashboard",
+                "publicKey": "Enter Public Key From Your Paystack Dashboard"
+            }
+        }
+    },
+
+    "button": {
+        "save": "Save Settings",
+        "activate": "Activate For",
+        "deactivate": "Deactivate For",
+        "default": "Make Default For",
+        "label":{
+            "activate": "Activate Paystack Payment Method For",
+            "deactivate": "Deactivate Paystack Payment Method For",
+            "default": "Make Paystack The Default Payment Method For "
+        },
+        "name":{
+            "activate": "Activate For",
+            "deactivate": "Deactivate For",
+            "default": "Make Default For"
+        }
+    }
+
+
+}
