@@ -12,7 +12,7 @@
   "authors": [
     {
         "name": "Destiny Diekedie",
-        "role": "Developer @AlphikkaTech"
+        "role": "Developer @Alphaceema"
         
     }
 ],
@@ -37,7 +37,23 @@
       "en-GB": "Accept Payment With Paystack",
       "fr-FR": "Accepter Le Paiement Avec Paystack"
 
+    },
+
+    "manufacturerLink": {
+      "de-DE": "https://alphaceema.com.ng",
+      "en-GB": "https://alphaceema.com.ng",
+      "fr-FR": "https://alphaceema.com.ng"
+    },
+    
+    "supportLink": {
+      "de-DE": "https://alphaceema.com.ng",
+      "en-GB": "https://alphaceema.com.ng",
+      "fr-FR": "https://alphaceema.com.ng"
     }
+
+
+
+
   }
 
 }
