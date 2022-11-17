@@ -44,7 +44,7 @@ class PayWithPaystack implements AsynchronousPaymentHandlerInterface
             $callback_url = $transaction->getReturnUrl();
             $email = $salesChannelContext->getCustomer()->getEmail();
             $amount = $transaction->getOrderTransaction()->getAmount()->getTotalPrice();
-            $currency = 'NGN';//$transaction->getOrder()->getCurrency()->getIsoCode();
+            $currency = $transaction->getOrder()->getCurrency()->getIsoCode();//NGN;
             $reference = Uuid::randomHex();
             $authorization = $this->paymentLink->returnSecretKey($salesChannelContext->getContext());
             
