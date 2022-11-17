@@ -83,10 +83,11 @@ class PayWithPaystack implements AsynchronousPaymentHandlerInterface
 
         
         $transactionId = $transaction->getOrderTransaction()->getId();
+        $authorization = $this->paymentLink->returnSecretKey($salesChannelContext->getContext());
         
         //dd($transactionId);
         //$allData = $this->paymentLink->wasPaymentSuccessful($salesChannelContext->getContext(), $transactionId);
-       if($this->paymentLink->wasPaymentSuccessful($salesChannelContext->getContext(), $transactionId) == 'success'){
+       if($this->paymentLink->wasPaymentSuccessful($salesChannelContext->getContext(), $transactionId, $authorization) == 'success'){
             $paymentState = 'success';
        }
         //$allData = $this->paymentLink->checkPaymentSuccess($salesChannelContext->getContext(), $transactionId);

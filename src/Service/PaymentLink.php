@@ -106,7 +106,7 @@ class PaymentLink
     }
 
 
-    public function wasPaymentSuccessful(Context $context, string $transactionId){
+    public function wasPaymentSuccessful(Context $context, string $transactionId, string $authorization){
 
         $criteria = new Criteria();
         $criteria->addFilter(new EqualsFilter('transactionId', $transactionId));
@@ -128,7 +128,7 @@ class PaymentLink
           CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
           CURLOPT_CUSTOMREQUEST => "GET",
           CURLOPT_HTTPHEADER => array(
-            "Authorization: Bearer sk_test_4822077a8eb36c205e3807b3aacd9711af768731",
+            "Authorization: Bearer $authorization",
             "Cache-Control: no-cache",
           ),
         ));
