@@ -200,8 +200,8 @@ Component.register('paystack-settings-page', {
 
             this.isLoading = false;
 
-           // alert('Paystack Has Been Set As Default Payment Method');
-           this.createNotificationSuccess({ title: 'Paystack Has Been Set As Default Payment Method' })
+           alert('Paystack Has Been Set As Default Payment Method');
+           //this.createNotificationSuccess({ title: 'Paystack Has Been Set As Default Payment Method' })
         
     
         },
@@ -229,6 +229,8 @@ Component.register('paystack-settings-page', {
            // this.getPaystackData();
 
            this.isLoading = false;
+
+           alert('Paystack Is Now Activated');
 
         },
 
@@ -258,69 +260,11 @@ Component.register('paystack-settings-page', {
           //  this.getPaystackData();
           this.isLoading = false;
 
-        },
+          alert('Paystack Is Now Deactivated');
 
-
-        paystackIsDefault(){
-
-            this.isLoading = true;
-
-            //this is for default payment method
-
-           for (let i = 0; i < this.salesChannels.length; i++) 
-           {
-
-               if(this.salesChannels[i].paymentMethodId === this.paymentMethodId)
-               {
-
-                    //
-                }
-
-
-            this.salesChannelsData.push(this.salesChannelData);
-  
-           }
-
-        //  console.log(this.salesChannelsData);
-
-        this.isLoading = false;
-
-        },
-
-        
-
-
-        /**
-         * @descriptipon checks if paystack payment method id exists in the sales_channel table
-         * payment_method_ids column 
-         * @param {*} salesChannelId 
-         * @returns null|string
-         *
-        ifPaystackPaymentMethodExist(salesChannelId){
-
-            const salesChannels = this.salesChannels;
-            
-            for(let i = 0; i < salesChannels.length; i++){
-
-                if(salesChannels[i].id === salesChannelId){
-
-                     for(let v = 0; v < salesChannels[i].paymentMethodIds.length; v++){
-
-                        if( salesChannels[i].paymentMethodIds[v] === this.paymentMethodId ){
-                            //this.paystackExist = true;
-                            console.log('TRUE');
-                            //return 'PaystackExist';
-                        }
-                    }
-                }   
-            } 
-            
-            this.getPaystackData();
-        }
-
-        */
-
-
+        }, 
+    
+       
 
    },
 
